@@ -1,6 +1,6 @@
 # amplify-react-tutorial
 
-このリポジトリには、Amplifyを使ったReactアプリのハンズオンです。
+このリポジトリは、Amplifyを使ったReactアプリのハンズオンです。
 
 作成するアプリは、認証機能付きのToDoアプリです。
 
