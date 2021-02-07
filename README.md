@@ -19,3 +19,9 @@ AWS Amplifyを使うと様々な機能が爆速で開発できます。
 2. [認証実装(20分)](doc/2.md)
 3. [ToDo管理API作成(10分)](doc/3.md)
 4. [Todoアプリ実装(30分)](doc/4.md)
+
+## 環境破棄 :boom:
+
+```bash
+$ amplify delete
+```
