@@ -1,6 +1,4 @@
-/* eslint-disable */
 import React from 'react';
-import _ from 'lodash';
 import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
@@ -19,7 +17,6 @@ import { createTodo } from './graphql/mutations'
 import { onCreateTodo } from './graphql/subscriptions'
 
 import awsconfig from './aws-exports';
-import { TodayOutlined } from '@material-ui/icons';
 
 Amplify.configure(awsconfig);
 
@@ -48,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const AuthStateApp = () => {
-  const todoList = []
   const classes = useStyles();
   const [authState, setAuthState] = React.useState();
   const [user, setUser] = React.useState();
@@ -62,6 +58,7 @@ const AuthStateApp = () => {
     });
 
     // todoの作成を監視
+    const todoList = []
     API.graphql(
       graphqlOperation(onCreateTodo)
     ).subscribe({
@@ -91,7 +88,6 @@ const AuthStateApp = () => {
             <InputBase
               className={classes.input}
               placeholder="ToDoを入力してください"
-              inputProps={{ 'aria-label': 'search google maps' }}
               value={value}
               onChange={event => setValue(event.target.value)}
             />
